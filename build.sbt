@@ -5,7 +5,7 @@ import sbt.Keys._
 import sbtrelease.ReleaseStateTransformations._
 import sbtrelease._
 
-name := "web-automation-core-scala-api"
+name := "scala-automation-api-client"
 
 organization := "com.gu"
 
@@ -28,12 +28,12 @@ sonatypeSettings
 description := "Scala client for the Guardian's Content API"
 
 scmInfo := Some(ScmInfo(
-  url("https://github.com/guardian/scala-automation/modules/api-client"),
-  "scm:git:git@github.com:guardian/scala-automation.git"
+  url("https://github.com/guardian/scala-automation-api-client"),
+  "scm:git:git@github.com:guardian/scala-automation-api-client.git"
 ))
 
 pomExtra := (
-  <url>https://github.com/guardian/scala-automation</url>
+  <url>https://github.com/guardian/scala-automation-api-client</url>
     <developers>
       <developer>
         <id>johnduffell</id>
@@ -59,7 +59,7 @@ ReleaseKeys.releaseProcess := Seq[ReleaseStep](
   runTest,
   setReleaseVersion,
   commitReleaseVersion,
-//  tagRelease,
+  tagRelease,
   ReleaseStep( // instead of publishArtifacts
     action = state => Project.extract(state).runTask(PgpKeys.publishSigned, state)._1,
     enableCrossBuild = true
