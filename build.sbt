@@ -12,7 +12,7 @@ organization := "com.gu"
 scalaVersion := "2.10.4"
 
 resolvers ++= Seq(
-  "Guardian GitHub Releases" at "http://guardian.github.io/maven/repo-releases",
+  "Guardian GitHub Releases" at "https://guardian.github.io/maven/repo-releases",
   "Typesafe Releases" at "http://repo.typesafe.com/typesafe/releases/"
 )
 
